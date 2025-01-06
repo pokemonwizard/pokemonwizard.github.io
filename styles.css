@@ -1,0 +1,226 @@
+.layout {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    min-height: 100vh;
+    color: #dcdcdc;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; 
+    height: 300px; 
+}
+
+.image-container img.charizard {
+    width: 340px;
+    height: 280px;
+    display: block;
+    position: relative; 
+}
+
+.image-container img.gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    width: 300px;
+    height: auto;
+    opacity: 0;
+}
+
+.image-container:hover img.gif {
+    opacity: 1;
+}
+
+main {
+    text-align: center;
+    background: #2b2b2b;
+    border-radius: 10px;
+    border: 3px solid #3a3a3a;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: rgb(255, 60, 0);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input1 {
+    color: rgb(255, 60, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1b1b1b;
+    border-radius: 5px;
+    outline: none;
+    background-color: #333333;
+}
+
+.input1:focus {
+    color: black;
+    border-color: rgb(255, 60, 0);
+    background: linear-gradient(to bottom right, rgb(255, 208, 0), rgb(255, 0, 0));
+}
+
+.input2 {
+    background-color: #1d1d1d;
+    color: rgb(255, 60, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(255, 60, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input2:hover {
+    background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(255, 208, 0));
+    color: rgb(0, 0, 0);
+}
+
+#card-results {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+.card-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#card-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #2b2b2b;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    color: #dcdcdc;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.close-btn {
+    color: rgb(255, 60, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(255, 208, 0);
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h2 {
+    color: rgb(255, 60, 0);
+    margin-bottom: 15px;
+}
+
+.attacks-section, .weaknesses-section {
+    margin-top: 20px;
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.attack {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #404040;
+    border-radius: 5px;
+}
