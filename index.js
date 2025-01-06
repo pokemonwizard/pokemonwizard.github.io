@@ -66,6 +66,13 @@ function showCardDetails(card) {
                             ${card.weaknesses.map(weakness => `${weakness.type} ${weakness.value}`).join(', ')}
                         </div>
                     ` : ''}
+
+                    ${card.resistances ? `
+                        <div class="weaknesses-section">
+                            <h3>Resistances:</h3>
+                            ${card.resistances.map(resistances => `${resistances.type} ${resistances.value}`).join(', ')}
+                        </div>
+                    ` : ''}
                 </div>
             </div>
         </div>
