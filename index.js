@@ -45,7 +45,7 @@ function showCardDetails(card) {
                     <p>Set: ${card.set.name}</p>
                     <p>Artist: ${card.artist}</p>
                     ${card.cardmarket?.prices?.averageSellPrice ? 
-                        `<p>Price: €${card.cardmarket.prices.averageSellPrice.toFixed(2)}</p>` 
+                        `<a href="${card.cardmarket.url}">Price: €${card.cardmarket.prices.averageSellPrice.toFixed(2)}</a>` 
                         : ''}
                     
                     ${card.attacks ? `
