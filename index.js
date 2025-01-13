@@ -11,7 +11,7 @@ function returnname() {
                 const cardsWrapper = document.createElement('div');
                 cardsWrapper.className = 'cards-grid';
                 
-                json.data.forEach(card => {
+                json.data.map(card => {
                     const cardElement = document.createElement('div');
                     cardElement.className = 'card-item';
                     cardElement.innerHTML = `
